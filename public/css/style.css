@@ -171,3 +171,15 @@ body{
         width: 60%;
     }
 }
+@media (max-width: 450px){
+    .form .front .form-element input,
+    .form .front .form-element button{
+        width: 80%;
+    }
+}
+@media (max-width: 350px){
+    .form .front .form-element input,
+    .form .front .form-element button{
+        width: 100%;
+    }
+}
