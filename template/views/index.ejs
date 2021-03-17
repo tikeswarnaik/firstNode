@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="form">
+        <div class="back">
+            <div>
+                <h2>Don't have an account?</h2>
+                <p>Sign up to save all your collection</p>
+                <button id="show-signup-form">
+                    Sign up
+                </button>
+            </div>
+            <div>
+                <h2>have an account?</h2>
+                <p>Sign in to save all your collection</p>
+                <button id="show-signin-form">
+                    Sign in
+                </button>
+            </div>
+        </div>
+
+
+        <div class="front">
+            <div class="signin">
+                <form action="/login" method="POST">
+                    <input class="hideme" type="radio" name="type" value="signin" checked>
+                    <div class="title">
+                        Sign in
+                    </div>
+                    <div class="form-element">
+                        <input type="text" placeholder="Email" name="userEmail" required>
+                    </div>
+                    <div class="form-element">
+                        <input type="password" placeholder="Password" name="userPassword" required>
+                    </div>
+                    <div class="form-element">
+                        <button type="submit">Sign in</button>
+                    </div>
+                    <div class="form-element">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </form>
+            </div>
+            <div class="signup">
+                <form action="/login" method="POST">
+                    <input class="hideme" type="radio" name="type" value="signup" checked>
+                    <div class="title">
+                        Sign up
+                    </div>
+                    <div class="form-element">
+                        <input type="text" placeholder="Fullname" name="userName">
+                    </div>
+                    <div class="form-element">
+                        <input type="text" placeholder="Email" name="userEmail">
+                    </div>
+                    <div class="form-element">
+                        <input type="password" placeholder="Password" name="userPassword">
+                    </div>
+                    <div class="form-element">
+                        <button type="submit">Sign up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/script/sc.js"></script>
+</body>
+</html>
