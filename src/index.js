@@ -22,22 +22,21 @@ app.use(express.static(path.join(__dirname,"../public/")));
 
 
 
-app.get("/login",(req,res)=>{
-    res.render("index");
-})
+app.get("/", (req, res) => {
+  res.render("index");
+});
 
 // using middleware to get the result
-app.post("/login", urlEncodedParser, (req, res) => {
-    const person = req.body;
-    // console.log(`Inside index req : `);
-    // console.log(person);
-  if(person.type=== 'signin'){
-      delete person.type;
-      signIn(person,res);
-  }
-  else if(person.type==='signup'){
-      delete person.type;
-      signUp(person,res);
+app.post("/", urlEncodedParser, (req, res) => {
+  const person = req.body;
+  // console.log(`Inside index req : `);
+  // console.log(person);
+  if (person.type === "signin") {
+    delete person.type;
+    signIn(person, res);
+  } else if (person.type === "signup") {
+    delete person.type;
+    signUp(person, res);
   }
 });
 

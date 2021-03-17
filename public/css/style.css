@@ -13,7 +13,7 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     width: 600px;
-    height: 350px;
+    min-height: 350px;
 }
 .form .back{
     position: absolute;
@@ -117,4 +117,57 @@ body{
 }
 .hideme{
     display: none;
+}
+
+@media screen and (max-width: 750px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .form{
+        position: static;
+        transform: translate(0%,0%);
+        width: 100%;
+    }
+    .form .back{
+        display: none;
+    }
+    .form .front{
+        position: static;
+        transform: translate(0%,0%);
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #ccc;
+    }
+    .form .front .signup{
+        display: block;
+        background-color: #fff;
+    }
+    .form .front .signin{
+        margin-bottom: 0px;
+        background-color: #fff;
+    }
+    .form .front > div{
+        text-align: center;
+    }
+    .form .front .title{
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 550px){
+    .form .front{
+        flex-direction: column;
+    }
+    .form .front .signin,
+    .form .front .signup{
+        width: 100%;
+    }
+    .form .front .form-element input,
+    .form .front .form-element button{
+        width: 60%;
+    }
 }
