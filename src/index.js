@@ -43,6 +43,9 @@ app.post("/", urlEncodedParser, (req, res) => {
 app.get("/thanks/:name",(req,res)=>{
     res.render("thanks",{name:req.params.name});
 });
+app.get("/project", (req, res) => {
+  res.render("project");
+});
 
 app.get("/back/:name",(req,res)=>{
     res.render("welback",{name:req.params.name});

@@ -13,7 +13,7 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     width: 70%;
-    height: 350px;
+    min-height: 350px;
     display: flex;
     align-items: center;
     background-color: #555;
@@ -35,4 +35,10 @@ body{
     color: #ccc;
     margin-bottom: 15px;
     font-size: 2em;
+}
+@media (max-width: 700px){
+    .container{
+        width: 100%;
+        height: fit-content;
+    }
 }
